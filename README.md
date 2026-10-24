@@ -64,6 +64,15 @@ Reads are marked read-only. `update_draft`, `delete_post` and `publish_post` are
 - Every tool call is recorded against your account.
 - `confirmed: true` is supplied by the assistant, so the server cannot itself prove a person said yes. The plugin's skills tell Claude to show you the preview and wait.
 
+## Troubleshooting
+
+- **Sign-in does not start or fails:** run `/mcp`, select **content-mill** and choose to authenticate again. Use the email and password of your Content Mill account (or Google). If you have no account, create one at [contentmill.dev](https://contentmill.dev) first; the sign-in page cannot create email accounts.
+- **Claude finds no Bluesky accounts:** connect them in the Content Mill web app (Accounts page), then ask again. Connect with your handle and an app password from Bluesky settings, not your main password.
+- **A post is refused:** Claude reads Bluesky's limits before writing and will say which one was broken (length, media). Ask it to adjust the post and preview again.
+- **The preview expired or was already used:** a preview works once and for 10 minutes. Ask Claude to preview the post again.
+- **Published, but no link yet:** publishing is asynchronous. Ask Claude to check the post again in a minute; a result of PartiallyFailed or Failed comes with the reason for each account.
+- **Still stuck:** write to [support@contentmill.dev](mailto:support@contentmill.dev) with the time and what you asked Claude to do.
+
 ## Privacy and support
 
 See [PRIVACY.md](./PRIVACY.md) and [contentmill.dev/privacy](https://contentmill.dev/privacy). Questions or problems: [support@contentmill.dev](mailto:support@contentmill.dev).

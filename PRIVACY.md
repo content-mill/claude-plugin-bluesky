@@ -7,7 +7,7 @@ This plugin is a thin wrapper: it ships configuration and skill text, and points
 - Your Content Mill sign-in (email and password, or Google sign-in) to authorise the connection. The access token Claude receives is valid for this Bluesky server only and is not accepted anywhere else.
 - The text, media and schedule of the posts and drafts you ask Claude to create, and the results of publishing them.
 - The names and connection status of your connected Bluesky accounts.
-- A record of each tool call made on your behalf (which tool, when, and whether it succeeded), so you can see what an assistant did.
+- A record of each tool call made on your behalf: which tool, when, the arguments Claude sent (for example the post text, the accounts and the media links) and a short result, so you can see what an assistant did.
 
 Posts are sent to Bluesky only after you approve a preview. Content Mill does not post anywhere else.
 
