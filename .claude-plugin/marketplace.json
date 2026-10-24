@@ -1,0 +1,17 @@
+{
+  "name": "content-mill-bluesky",
+  "owner": {
+    "name": "Content Mill",
+    "email": "support@contentmill.dev"
+  },
+  "metadata": {
+    "description": "Schedule and publish Bluesky posts from chat: write posts within the 300-character limit, add images or video, preview each one, and track what's scheduled. Bluesky scheduler by Content Mill."
+  },
+  "plugins": [
+    {
+      "name": "content-mill-bluesky",
+      "source": "./",
+      "description": "Schedule and publish Bluesky posts from chat: write posts within the 300-character limit, add images or video, preview each one, and track what's scheduled. Bluesky scheduler by Content Mill."
+    }
+  ]
+}

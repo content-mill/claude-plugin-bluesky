@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Manifests are valid JSON and agree
+        run: |
+          jq -e '.name and .description and .version' .claude-plugin/plugin.json
+          jq -e '.plugins[0].name == "content-mill-bluesky"' .claude-plugin/marketplace.json
+          jq -e '.mcpServers["content-mill"].type == "http" and .mcpServers["content-mill"].url == "https://bsky-mcp.contentmill.dev/mcp"' .mcp.json
+      - name: Every skill has frontmatter
+        run: |
+          for f in skills/*/SKILL.md; do
+            head -1 "$f" | grep -qx -- '---'
+            grep -q '^name: ' "$f"
+            grep -q '^description: ' "$f"
+          done
+      - name: Icon is present
+        run: test -s .claude-plugin/icon.png

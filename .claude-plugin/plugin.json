@@ -1,0 +1,22 @@
+{
+  "name": "content-mill-bluesky",
+  "description": "Schedule and publish Bluesky posts from chat: write posts within the 300-character limit, add images or video, preview each one, and track what's scheduled. Bluesky scheduler by Content Mill.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Content Mill",
+    "email": "support@contentmill.dev",
+    "url": "https://contentmill.dev"
+  },
+  "homepage": "https://contentmill.dev",
+  "repository": "https://github.com/content-mill/claude-plugin-bluesky",
+  "license": "MIT",
+  "keywords": [
+    "bluesky",
+    "bsky",
+    "bluesky scheduler",
+    "scheduler",
+    "social media",
+    "mcp",
+    "content mill"
+  ]
+}
